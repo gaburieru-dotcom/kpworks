@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スラッシュタイピング - 英語とタイピングを同時に学ぶ</title>
+  <meta name="description" content="AIを活用した英語タイピング＆スラッシュリーディング学習Webアプリケーション。英文を打ち込みながら日本語訳を身につけます。">
+  
+  <link rel="canonical" href="https://yourdomain.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:title" content="スラッシュタイピング - 英語とタイピングを同時に学ぶ">
+  <meta property="og:description" content="AIを活用した英語タイピング＆スラッシュリーディング学習Webアプリケーション。英文を打ち込みながら日本語訳を身につけます。">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="スラッシュタイピング - 英語とタイピングを同時に学ぶ">
+  <meta property="twitter:description" content="AIを活用した英語タイピング＆スラッシュリーディング学習Webアプリケーション。英文を打ち込みながら日本語訳を身につけます。">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "スラッシュタイピング",
+    "url": "https://yourdomain.com/",
+    "description": "英語タイピングとスラッシュリーディングを同時に学べるWebアプリケーション。五感を使った英語脳の育成をサポートします。",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <div class="app-background-glow"></div>
+  
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-area">
+        <svg class="svg-icon logo-svg" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <h1>スラッシュタイピング</h1>
+      </div>
+      
+      <div class="header-actions">
+        <button id="btn-library" class="icon-btn" title="教材ライブラリ"><svg class="svg-icon" viewBox="0 0 24 24" style="fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>教材を選ぶ</button>
+        <button id="btn-stats" class="icon-btn" title="学習履歴"><svg class="svg-icon" viewBox="0 0 24 24" style="fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>学習履歴</button>
+        <button id="btn-settings" class="icon-btn" title="設定"><svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>設定</button>
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar card">
+      <div class="stat-item">
+        <span class="stat-label">WPM</span>
+        <span id="stat-wpm" class="stat-value">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">正確性</span>
+        <span id="stat-accuracy" class="stat-value">100%</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">ストリーク</span>
+        <span id="stat-streak" class="stat-value">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">進捗</span>
+        <span id="stat-progress" class="stat-value">1/1</span>
+      </div>
+    </section>
+
+    <!-- Main Workspace -->
+    <main class="main-workspace">
+      <!-- Google AdSense Top Ad -->
+      <div class="adsense-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+             data-ad-slot="YOUR_AD_SLOT_TOP"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Typing Card -->
+      <div class="typing-card card">
+        <div class="typing-header">
+          <div class="mode-indicator">
+            <span class="dot active"></span>
+            <span id="mode-text">スラッシュリーディング練習中</span>
+          </div>
+          <div class="voice-indicator" id="btn-speak" title="音声を再生">
+            <svg class="svg-icon voice-svg" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="passage-progress-container">
+          <div id="passage-progress-bar" class="passage-progress-bar"></div>
+        </div>
+
+        <!-- Hidden input for typing focus -->
+        <input type="text" id="hidden-input" class="hidden-input" autocomplete="off" autofocus>
+
+        <!-- Typing Display Area -->
+        <div class="typing-display-container" id="typing-trigger">
+          <!-- Text to type will be rendered letter by letter inside spans -->
+          <div id="words-container" class="words-container">
+            <div class="placeholder-text">テキストを読み込み中...</div>
+          </div>
+          
+          <div class="focus-notice" id="focus-notice">
+            クリックしてタイピングを開始してください
+          </div>
+        </div>
+
+        <!-- Slash Translation Area -->
+        <div class="slash-translation-container" id="translation-container">
+          <!-- Translation chunks will appear here as the user types -->
+        </div>
+      </div>
+
+      <!-- Controls & Progress -->
+      <div class="controls-panel">
+        <button id="btn-reset" class="action-btn secondary-btn" style="margin: 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px;"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>やり直す</button>
+      </div>
+
+      <!-- Google AdSense Bottom Ad -->
+      <div class="adsense-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+             data-ad-slot="YOUR_AD_SLOT_BOTTOM"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer" style="text-align: center; margin-top: 30px; display: flex; flex-direction: column; gap: 12px; align-items: center;">
+      <div class="footer-links" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; font-size: 0.85rem;">
+        <a href="columns.html" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">学習コラム</a>
+        <span style="color: var(--border-glass)">|</span>
+        <a href="privacy-policy.html" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">プライバシーポリシー</a>
+        <span style="color: var(--border-glass)">|</span>
+        <a href="terms.html" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">利用規約・免責事項</a>
+        <span style="color: var(--border-glass)">|</span>
+        <a href="contact.html" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">お問い合わせ</a>
+      </div>
+      <p style="color: var(--text-dark); font-size: 0.8rem; margin: 0;">© 2026 SlashTyper.</p>
+    </footer>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="modal-settings" class="modal-overlay">
+    <div class="modal-content card">
+      <div class="modal-header">
+        <h2>環境設定</h2>
+        <button class="close-btn" id="close-settings">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group-checkbox">
+          <input type="checkbox" id="setting-voice" checked>
+          <label for="setting-voice">完了時に自動で音声読み上げを行う</label>
+        </div>
+
+        <div class="form-group-checkbox">
+          <input type="checkbox" id="setting-sound" checked>
+          <label for="setting-sound">タイピング音（キー音）を有効にする</label>
+        </div>
+
+        <div class="form-group">
+          <label for="setting-voice-rate">読み上げ速度</label>
+          <input type="range" id="setting-voice-rate" min="0.5" max="1.5" step="0.1" value="1.0" class="form-range">
+          <span id="voice-rate-val">1.0</span>
+        </div>
+
+        <div class="form-group">
+          <label for="setting-translation-timing">和訳の表示タイミング</label>
+          <select id="setting-translation-timing" class="form-input">
+            <option value="typing">タイプ中・完了したチャンクのみ表示</option>
+            <option value="always">最初からすべて表示</option>
+            <option value="hidden">非表示</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button id="btn-save-settings" class="action-btn primary-btn">設定を保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Library Modal -->
+  <div id="modal-library" class="modal-overlay">
+    <div class="modal-content card" style="max-width: 850px; width: 95%;">
+      <div class="modal-header">
+        <h2>教材を選ぶ</h2>
+        <button class="close-btn" id="close-library">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: -10px; margin-bottom: 8px;">学習したい教材を選択してください。各教材はスラッシュリーディング用の分割と和訳、単語解説が用意されています。</p>
+        
+        <!-- Category Tabs -->
+        <div class="library-tabs">
+          <button class="library-tab active" data-category="all">すべて</button>
+          <button class="library-tab" data-category="speech">🎙️ 演説</button>
+          <button class="library-tab" data-category="alice">🐇 文学</button>
+          <button class="library-tab" data-category="myth">⚡ 神話</button>
+          <button class="library-tab" data-category="bible">📖 聖書</button>
+        </div>
+
+        <div class="custom-sentence-list" id="custom-sentence-list">
+          <div class="empty-list-notice">登録されている教材はありません。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistics Modal -->
+  <div id="modal-stats" class="modal-overlay">
+    <div class="modal-content card">
+      <div class="modal-header">
+        <h2>学習履歴・データ</h2>
+        <button class="close-btn" id="close-stats">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="stats-grid">
+          <div class="grid-stat-card">
+            <span class="grid-stat-num" id="total-typed-sentences">0</span>
+            <span class="grid-stat-label">クリアした文数</span>
+          </div>
+          <div class="grid-stat-card">
+            <span class="grid-stat-num" id="avg-wpm">0</span>
+            <span class="grid-stat-label">平均 WPM</span>
+          </div>
+          <div class="grid-stat-card">
+            <span class="grid-stat-num" id="avg-accuracy">0%</span>
+            <span class="grid-stat-label">平均正確性</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-clear-stats" class="action-btn danger-btn">履歴をリセット</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dictionary Modal -->
+  <div id="modal-dict" class="modal-overlay">
+    <div class="modal-content card">
+      <div class="modal-header">
+        <h2 id="dict-word-title">Word</h2>
+        <button class="close-btn" id="close-dict">&times;</button>
+      </div>
+      <div class="modal-body" id="dict-modal-body">
+        <div class="dict-loading">辞書を検索中...</div>
+      </div>
+      <div class="modal-footer">
+        <a id="dict-web-link" href="#" target="_blank" class="action-btn secondary-btn" style="text-decoration:none;">Weblioで詳細を見る<svg class="svg-icon link-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio elements for key sounds -->
+  <audio id="audio-click-1" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav" preload="auto"></audio>
+  <audio id="audio-click-2" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav" preload="auto"></audio>
+  <audio id="audio-error" src="https://assets.mixkit.co/active_storage/sfx/951/951-84.wav" preload="auto"></audio>
+  <audio id="audio-success" src="https://assets.mixkit.co/active_storage/sfx/2019/2019-84.wav" preload="auto"></audio>
+
+  <!-- JS Files -->
+  <script src="sentences.js?v=2"></script>
+  <script src="app.js?v=12"></script>
+</body>
+</html>
